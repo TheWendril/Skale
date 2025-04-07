@@ -1,0 +1,9 @@
+apiVersion: core.skale.io/v1
+kind: Skale
+metadata:
+  labels:
+    app.kubernetes.io/name: skale-controller
+    app.kubernetes.io/managed-by: kustomize
+  name: skale-sample
+spec:
+  # TODO(user): Add fields here
