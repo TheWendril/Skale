@@ -3,12 +3,12 @@ entries:
   skale:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2025-04-07T02:36:30.304509118-03:00"
+    created: "2025-04-07T02:38:12.725494651-03:00"
     description: A Helm chart for Kubernetes
     digest: bc7e59b876f5391ecf504d84735819e195342702e9d97eddeae402a2c3e165ba
     name: skale
     type: application
     urls:
-    - https://artifacthub.io/packages/helm/skale/skale/skale-0.1.0.tgz
+    - skale-0.1.0.tgz
     version: 0.1.0
-generated: "2025-04-07T02:36:29.818883242-03:00"
+generated: "2025-04-07T02:38:12.245881151-03:00"
