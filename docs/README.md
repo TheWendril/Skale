@@ -1,18 +1,9 @@
 
 ![Skale Logo Placeholder](logo_w_name-.png)
 
-[![Awesome](https://cdn.jsdelivr.net/gh/sindresorhus/awesome@latest/media/badge.svg)](https://github.com/sindresorhus/awesome)
-
-![Version](https://img.shields.io/badge/version-v0.1.0-blue)
-
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/your-username/your-repo/graphs/commit-activity)
+[![Awesome](https://cdn.jsdelivr.net/gh/sindresorhus/awesome@latest/media/badge.svg)](https://github.com/sindresorhus/awesome) ![Version](https://img.shields.io/badge/version-v0.1.0-blue) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/your-username/your-repo/graphs/commit-activity)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/skale)](https://artifacthub.io/packages/search?repo=skale)
-
-![GitHub followers](https://img.shields.io/github/followers/TheWendril)
-
-![GitHub contributors](https://img.shields.io/github/contributors/TheWendril/Skale)
-
+[![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/skale)](https://artifacthub.io/packages/search?repo=skale) ![GitHub contributors](https://img.shields.io/github/contributors/TheWendril/Skale) ![GitHub followers](https://img.shields.io/github/followers/TheWendril)
 
 **Manage your deployments with ease!**  
 Skale provides a declarative approach to installing the necessary Helm chart and creating `skale.yaml` configuration files for your scalability based on resource limits specific needs.
