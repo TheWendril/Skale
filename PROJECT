@@ -5,6 +5,8 @@
 domain: skale.io
 layout:
 - go.kubebuilder.io/v4
+plugins:
+  helm.kubebuilder.io/v1-alpha: {}
 projectName: skale-controller
 repo: github.com/TheWendril/Skale
 resources:
