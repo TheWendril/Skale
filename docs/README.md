@@ -1,22 +1,29 @@
-# 🚀 Skale Deployment Toolkit
 
-<!-- [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d2410ef78f9b880e37a8957778d38ba2/media/badge.svg)](https://github.com/sindresorhus/awesome) -->
+![Skale Logo Placeholder](logo_w_name-.png)
+
+[![Awesome](https://cdn.jsdelivr.net/gh/sindresorhus/awesome@latest/media/badge.svg)](https://github.com/sindresorhus/awesome)
+
+![Version](https://img.shields.io/badge/version-v0.1.0-blue)
+
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/your-username/your-repo/graphs/commit-activity)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-<!-- ![Skale Logo Placeholder](path/to/your/skale-logo.png) -->
 [![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/skale)](https://artifacthub.io/packages/search?repo=skale)
 
+![GitHub followers](https://img.shields.io/github/followers/TheWendril)
 
-**Deploy and manage your deployments with ease!** This toolkit provides a streamlined approach to installing the necessary Helm chart and creating `skale.yaml` configuration files for your specific needs.
+![GitHub contributors](https://img.shields.io/github/contributors/TheWendril/Skale)
 
----
+
+**Manage your deployments with ease!**  
+Skale provides a declarative approach to installing the necessary Helm chart and creating `skale.yaml` configuration files for your scalability based on resource limits specific needs.
+
 
 ## ✨ Features
 
 * **Effortless Helm Installation:** Clear and concise instructions to get the Skale Helm chart up and running.
-* **Intuitive `skale.yaml` Generation:** Guidance on creating configuration files for various Skale components and settings.
+* **Intuitive `skale.yaml` Generation:** Guidance on creating Skale files for Deployments.
 * **Modern and Clean Design:** Easy-to-read documentation for a smooth user experience.
-* **Scalable and Flexible:** Adaptable to different Skale network configurations.
+* **Scalable and Flexible:** Horizontal Pod Autoscaller based on Resource Limits.
 
 ---
 
@@ -52,7 +59,7 @@ Follow these steps to install the Skale Helm chart on your Kubernetes cluster:
     * **Default Installation:**
 
         ```bash
-        helm install skale -n your_namespace
+        helm install skale -n your_namespace thewendril/skale
         ```
 
     * **Custom Installation (using a `values.yaml` file):**
@@ -60,7 +67,7 @@ Follow these steps to install the Skale Helm chart on your Kubernetes cluster:
         Create a `values.yaml` file with your desired configurations (refer to the chart's documentation for available options). Then, run:
 
         ```bash
-        helm install skale -f your-custom-values.yaml thewendril/skale
+        helm install skale -f your-custom-values.yaml -n your_namespace thewendril/skale 
         ```
 
 4.  **Verify the installation:**
@@ -68,7 +75,7 @@ Follow these steps to install the Skale Helm chart on your Kubernetes cluster:
     Check if the Skale pods are running in your Kubernetes cluster:
 
     ```bash
-    kubectl get pods -n your_namespace # Replace 'your_namespace' with the namespace where you installed the chart, if different.
+    kubectl get pods -n your_namespace 
     ```
 
     You should see pods related to the Skale deployment in a `Running` state.
@@ -81,23 +88,24 @@ The `skale.yaml` file is crucial for defining the configuration of your Skale co
 
 ### Basic Skale Node Configuration
 
-A basic `skale.yaml` for deploying a Skale node might look like this:
+A basic `skale.yaml` for deploying a Skale object might look like this:
 
 ```yaml
-apiVersion: core.skale.io/v1
-kind: Skale
-metadata:
-  name: your_skale-skaler
-  namespace: your_namespace
-spec:
-  scaleTargetRef:
-    apiVersion: apps/v1
-    kind: Deployment # Deployment only
-    name: deployment_name
-  minReplicas: 1
-  maxReplicas: 10
-  metrics:
-  - type: Resource
-    resource: 
-      name: cpu
-      targetAverageUtilization: 80
+    apiVersion: core.skale.io/v1
+    kind: Skale
+    metadata:
+    name: your_skale_name-skaler
+    namespace: your_namespace
+    spec:
+    scaleTargetRef:
+        apiVersion: apps/v1
+        kind: Deployment # Deployment only
+        name: deployment_name
+    minReplicas: 1
+    maxReplicas: 10
+    metrics:
+    - type: Resource
+        resource: 
+        name: cpu
+        targetAverageUtilization: 80
+```
